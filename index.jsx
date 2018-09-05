@@ -436,7 +436,7 @@ const MapInteractionCSS = (props) => {
                 height: '100%',
                 width: '100%',
                 position: 'relative', // for absolutely positioned children
-                overflow: 'hidden',
+                overflow: 'visible',
                 touchAction: 'none', // Not supported in Safari :(
                 msTouchAction: 'none',
                 cursor: 'all-scroll',
