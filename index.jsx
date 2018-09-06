@@ -447,6 +447,8 @@ const MapInteractionCSS = (props) => {
             >
               <div
                 style={{
+                  display: 'flex',
+                  alignItems: 'center',
                   transform: transform,
                   transformOrigin: '0 0 '
                 }}
