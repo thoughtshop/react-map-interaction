@@ -402,6 +402,7 @@ class MapInteraction extends Component {
     }
     return (
       <div
+        className="map-interaction"
         ref={(node) => { this.containerNode = node; }}
         onWheel={this.onWheel}
         style={{
@@ -423,6 +424,7 @@ class MapInteraction extends Component {
   This component provides a map like interaction to any content that you place in it. It will let
   the user zoom and pan the children by scaling and translating props.children using css.
 */
+
 const MapInteractionCSS = (props) => {
   return (
     <MapInteraction {...props}>
@@ -432,6 +434,7 @@ const MapInteractionCSS = (props) => {
           const transform = `translate(${translation.x}px, ${translation.y}px) scale(${scale})`;
           return (
             <div
+              className="map-interaction-container"
               style={{
                 height: '100%',
                 width: '100%',
@@ -446,11 +449,13 @@ const MapInteractionCSS = (props) => {
               }}
             >
               <div
+                className="map-interaction-inner"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
                   transform: transform,
-                  transformOrigin: '0 0 '
+                  transformOrigin: '0 0 ',
+                  height: '100%'
                 }}
               >
                 {props.children}
